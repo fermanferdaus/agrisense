@@ -1,7 +1,7 @@
 /* === Font dan Layout Umum === */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #e0f7fa, #f1f8e9); /* Soft background gradient */
+    background: #ffffff;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -39,12 +39,12 @@ footer {
 
 /* === Kartu Informasi === */
 .card-custom {
-    background: #e0f7fa; /* Soft blue background */
+    background: #ffffff;
     border-radius: 20px;
     padding: 20px;
     border: none;
     box-shadow:
-        10px 10px 20px #b8d8db,
+        10px 10px 20px #e0e0e0,
         -10px -10px 20px #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInCard 0.8s ease forwards;

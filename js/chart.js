@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>${row.tanggal}</td>
                 <td>${row.waktu}</td>
                 <td>${row.ph_tanah}</td>
-                <td>${row.status_nutrisi}</td>
+                <td>${row.pompa_basa}</td>
+                <td>${row.pompa_asam}</td>
             `;
             tbody.appendChild(tr);
         });

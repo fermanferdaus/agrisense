@@ -27,21 +27,6 @@
 
     <!-- Animate.css CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <!-- Background Decor -->
-    <style>
-        body::before {
-            content: "";
-            background: url('assets/bg-leaf.svg') no-repeat right top;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            opacity: 0.05;
-            z-index: -1;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -65,31 +50,46 @@
                 <div class="col-12 mb-4">
                     <h2 class="h2 text-success fw-bold animate__animated animate__fadeInUp">Informasi</h2>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card card-custom animate__animated animate__fadeInLeft">
+    
+                <div class="col-lg-4 mb-4">
+                    <div class="card card-custom animate__animated animate__fadeInUp">
                         <div class="card-header text-center">
-                            <i class="bi bi-flask feature-icon"></i>
-                            <h2 class="h5 mt-2">Ph Tanah</h2>
+                            <i class="bi-droplet-half feature-icon"></i>
+                            <h2 class="h5 mt-2">pH Tanah</h2>
                         </div>
                         <div class="card-body">
                             <div class="text-center h4" id="ph">---</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card card-custom animate__animated animate__fadeInRight">
+    
+                <div class="col-lg-4 mb-4">
+                    <div class="card card-custom animate__animated animate__fadeInUp">
                         <div class="card-header text-center">
-                            <i class="bi bi-check-circle feature-icon"></i>
-                            <h2 class="h5 mt-2">Status Pemberian Nutrisi</h2>
+                            <i class="bi-arrow-up-circle-fill feature-icon"></i>
+                            <h2 class="h5 mt-2">Pompa Basa</h2>
                         </div>
                         <div class="card-body">
-                            <div class="text-center h4" id="status">---</div>
+                            <div class="text-center h4" id="status-basa">---</div>
                         </div>
                     </div>
                 </div>
+    
+                <div class="col-lg-4 mb-4">
+                    <div class="card card-custom animate__animated animate__fadeInUp">
+                        <div class="card-header text-center">
+                            <i class="bi-arrow-down-circle-fill feature-icon"></i>
+                            <h2 class="h5 mt-2">Pompa Asam</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center h4" id="status-asam">---</div>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
         </div>
-    </section>
+    </section>    
 
     <section class="pt-0 pb-4 animate__animated animate__fadeInUp" id="grafik">
         <div class="container px-5">
@@ -142,7 +142,8 @@
                                     <th>Tanggal</th>
                                     <th>Waktu</th>
                                     <th>pH Tanah</th>
-                                    <th>Status</th>
+                                    <th>Pompa Basa</th>
+                                    <th>Pompa asam</th>
                                 </tr>
                             </thead>
                             <tbody id="table-body">

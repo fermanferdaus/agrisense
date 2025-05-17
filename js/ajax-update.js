@@ -16,15 +16,20 @@ function formatPhTanah(data) {
     return data.ph_tanah;
 }
 
-function formatStatusNutrisi(data) {
-    return data.status_nutrisi == 1 ? 'Aktif' : 'Nonaktif';
+function formatPompaBasa(data) {
+    return data.pompa_basa == 1 ? 'Aktif' : 'Nonaktif';
+}
+
+function formatPompaAsam(data) {
+    return data.pompa_asam == 1 ? 'Aktif' : 'Nonaktif';
 }
 
 function updateAll() {
     updateElement('ambil_data.php', 'ph', formatPhTanah);
-    updateElement('ambil_data.php', 'status', formatStatusNutrisi);
+    updateElement('ambil_data.php', 'status-basa', formatPompaBasa);
+    updateElement('ambil_data.php', 'status-asam', formatPompaAsam);
 }
 
-setInterval(updateAll, 2000);
+setInterval(updateAll, 5000);
 
 updateAll();
